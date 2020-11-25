@@ -21,6 +21,8 @@ Prefer copy over add: http://docs.docker.com/articles/dockerfile_best-practices/
 Copy only supports copying local files
 ```dockerfile
 COPY ./index.html /var/www/index.html
+
+COPY . . # copy everything from the local directory to the container
 ```
 
 Sets the user name to use 

@@ -42,7 +42,9 @@ Let's first start by just accessing a ready made system, for example one that do
 
 Let's open simple jupyter container
 
+```bash
 docker run -p 8888:8888 jupyter/minimal-notebook
+```
 
 and manually open the link in the browser.
 
