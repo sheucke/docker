@@ -13,7 +13,11 @@ sudo add-apt-repository \
    $(lsb_release -cs) \
    stable"
 sudo apt-get update
+
+# install the community edition of docker
 sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+# create group and add user so "sudo" has not to be used all the time
 sudo groupadd docker
 sudo usermod -aG docker $USER
 echo "you need to logout and log in to use docker without sudo"

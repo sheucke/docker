@@ -85,7 +85,7 @@ docker run -v
 
 docker container rm
 
-docker container log 
+docker container logs
 
 You can use some ready made containers as a programs, with all dependencies solved for you.There is a whole set of, for example bioinformatics images [BioContainers](https://github.com/BioContainers/containers)
 
@@ -94,8 +94,11 @@ You can for example, run a *blastp* tool
 docker run biocontainers/blast:2.2.31 blastp -help
 
 Or you may want to check this new Python 3.9 that all are talking about
+
 docker run -v $pwd/my_research:/my_research -it python:3.9.0rc1-buster
+
 or run something using this newest and latest
+
 docker run --rm -v $(pwd)/my_research:/my_research python:3.9.0rc1-buster python /my_research/new_python_example.py
 
 It may be fun and useful to run an *interactive* session in the container, where you access bash
