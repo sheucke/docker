@@ -16,13 +16,29 @@ docker run -p 8000:8888 --name datascience jupyter/datascience-notebook
 
 other useful commands
 ```bash
+# list runing containers
+docker ps
+
+# list all containers runing and not running
+docker ps -a
+
 docker container list all
 
+# remove a container
 docker container rm 
 
+docker inspect
+
+# mysql container with mounted external data folder
+docker run --mount type=bind, source=/data/mysql, target=/var/lib/mysql mysql
+
+# delete all containers
 docker container prune
 
 docker container logs
+
+# start more than one container using a docker-compose.yml file
+docker-compose up
 ```
 
 access a runing docker container
